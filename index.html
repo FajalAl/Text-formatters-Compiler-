@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Formatter</title>
+    <style>
+        textarea {
+            width: 100%;
+            height: 200px;
+        }
+    </style>
+    <script>
+        function formatText() {
+            var inputText = document.getElementById("input-text").value;
+
+            var formattedText = "<h2>Formatted Text</h2>";
+            formattedText += "<pre>" + inputText.toUpperCase() + "</pre>";
+            formattedText += "<strong>" + inputText + "</strong>";
+
+            document.getElementById("formatted-output").innerHTML = formattedText;
+        }
+    </script>
+</head>
+<body>
+    <h1>Text Formatter</h1>
+    <textarea id="input-text" placeholder="Enter your text here"></textarea>
+    <button onclick="formatText()">Format</button>
+    <div id="formatted-output"></div>
+</body>
+</html>
